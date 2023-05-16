@@ -155,7 +155,7 @@ def retorno(pelicula: str):
 # -------------------------------------------------------------------------------
 
 # Cargamos nuestro archivo CSV para ser consumido por el endpoint de ML:
-df2 = pd.read_csv('movies_ML_sample40.csv', low_memory=False)
+df2 = pd.read_csv('movies_ML_sample10.csv', low_memory=False)
 
 # Cargamos nuestro modelo:
 
