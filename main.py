@@ -194,3 +194,4 @@ def recomendacion(titulo: str, top_n=5):
     recommended_movies = df2.iloc[top_indices]['title'].values.tolist()
 
     return {'Lista recomendada': recommended_movies}
+
