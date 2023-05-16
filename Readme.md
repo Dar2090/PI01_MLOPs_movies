@@ -142,6 +142,12 @@ Te en cuenta que para este punto estaremos usando un datasets reducido para la c
 </p>
 
 
+## **Video**
+
+Te dejo un enlace a un [video](https://youtu.be/xQTr93WAanU) que muestra un poco el funcionamiento de la pagina donde esta la API.
+
+
+
 ## **Fuente de datos**
 
 Aca podes descargar el dataset original y tambien un diccionario con informacion de las columnas que posee el dataset.
