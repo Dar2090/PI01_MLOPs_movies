@@ -163,7 +163,7 @@ df2 = pd.read_csv('movies_ML_sample40.csv', low_memory=False)
 df2.fillna({'genres': 'Unknown', 'overview': ''}, inplace=True)
 
 # Codificación one-hot para la columna 'genres'
-one_hot_encoder = OneHotEncoder(sparse_output=False)
+one_hot_encoder = OneHotEncoder(sparse=False)
 genres_encoded = one_hot_encoder.fit_transform(df2[['genres']])
 
 # Crear una matriz de características dispersa para el resumen (overview) utilizando TF-IDF
