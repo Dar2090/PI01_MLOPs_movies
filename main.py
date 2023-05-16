@@ -58,10 +58,10 @@ def peliculas_mes(mes: str) -> dict:
             "cantidad": cantidad_peliculas}
 
 
-@app.get('/peliculas_dia/{dia}')
-def peliculas_dia(dia: str) -> dict:
+@app.get('/peliculas_dis/{dis}')
+def peliculas_dia(dis: str) -> dict:
   
-    dia_num = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'].index(dia)
+    dia_num = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'].index(dis.capitalize())
 
     # Convertimos la columna 'release_date' a datetime (just in case)
     df_red['release_date'] = pd.to_datetime(df_red['release_date'], format='%Y-%m-%d')
@@ -75,7 +75,7 @@ def peliculas_dia(dia: str) -> dict:
     cantidad = peliculas_con_fecha_valida.shape[0]
 
     # Retornar un diccionario con el día y la cantidad de películas
-    return {'dia': dia, 
+    return {'dia': dis, 
             'cantidad': cantidad}
 
 
