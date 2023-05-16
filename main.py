@@ -27,7 +27,7 @@ def read_root():
 # -------------------------------------------------------------------------------
 
 # Cargamos nuestro archivo CSV para ser consumido por los endpoints de consultas:
-df_red = pd.read_csv('movies_dataset_red.csv', low_memory=False)
+df_red = pd.read_csv('Datasets/movies_dataset_red.csv', low_memory=False)
 
 
 @app.get('/peliculas_mes/{mes}')
@@ -155,7 +155,7 @@ def retorno(pelicula: str):
 # -------------------------------------------------------------------------------
 
 # Cargamos nuestro archivo CSV para ser consumido por el endpoint de ML:
-df2 = pd.read_csv('movies_ML_sample10.csv', low_memory=False)
+df2 = pd.read_csv('Datasets/movies_ML_sample10.csv', low_memory=False)
 
 # Cargamos nuestro modelo:
 
@@ -188,7 +188,7 @@ def recomendacion(titulo: str, top_n=5):
     similarity_scores = similarity_matrix[movie_index]
 
     # Obtener los índices de las películas más similares
-    top_indices = similarity_scores.argsort()[::-1][1:top_n+1]
+    top_indices = similarity_scores.argsort()[::-1][1:int(top_n)+1]
 
     # Obtener los títulos de las películas recomendadas
     recommended_movies = df2.iloc[top_indices]['title'].values.tolist()
