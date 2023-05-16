@@ -153,7 +153,7 @@ def retorno(pelicula: str):
             'anio': anio}
 
 # -------------------------------------------------------------------------------
-'''
+
 # Cargamos nuestro archivo CSV para ser consumido por el endpoint de ML:
 df2 = pd.read_csv('movies_ML_sample40.csv', low_memory=False)
 
@@ -194,4 +194,3 @@ def recomendacion(titulo: str, top_n=5):
     recommended_movies = df2.iloc[top_indices]['title'].values.tolist()
 
     return {'Lista recomendada': recommended_movies}
-'''
