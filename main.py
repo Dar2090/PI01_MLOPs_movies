@@ -75,7 +75,7 @@ def peliculas_dia(dis: str) -> dict:
     cantidad = peliculas_con_fecha_valida.shape[0]
 
     # Retornar un diccionario con el día y la cantidad de películas
-    return {'dia': dis, 
+    return {'dia': dis.capitalize(), 
             'cantidad': cantidad}
 
 
